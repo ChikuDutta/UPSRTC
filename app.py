@@ -76,9 +76,11 @@ def get_booking():
 
     response = requests.post(url, headers=headers, json=data)
 
+    response_body_json = response.json()
+
     return jsonify({
         "status_code": response.status_code,
-        "response_body": response.text
+        "response_body": response_body_json
     })
 
 if __name__ == '__main__':
