@@ -43,7 +43,6 @@ private_key = serialization.load_pem_private_key(
 @app.route('/get_booking', methods=['GET'])
 def get_booking():
     booking_id = request.args.get('bookingid')
-    print(booking_id)
 
     if not booking_id:
         return jsonify({'error': 'Booking ID is required'}), 400
