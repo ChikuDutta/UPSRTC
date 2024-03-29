@@ -42,7 +42,6 @@ private_key = serialization.load_pem_private_key(
 
 @app.route('/get_booking', methods=['GET'])
 def get_booking():
-    print("Hii")
     booking_id = request.args.get('bookingid')
     print(booking_id)
 
